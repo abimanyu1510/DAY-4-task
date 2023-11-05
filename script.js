@@ -72,7 +72,7 @@ let sum2=0;
 })(13,17,45,45,70,56,90);
 //----------------------------------------
 //Return all the palindromes in an array
-// 1.e).annoymous function: palindrome:
+// 1.e).annoymous function:
 var palindrome1=function (drome){
     var res4=[];
     for(var i=0;i<drome.length;i++){
@@ -101,20 +101,34 @@ var palindrome1=function (drome){
         (["madam","dad","data"])
  //------------------------------------------------------------
  //1)Return median of two sorted arrays of the same size.
- //1)f. annoymous function:   
+ //1)f.iife function:   
 const median1=[1,2,3];
 const median2=[5,7,6];
-function median(median1,median2){
+(function (median1,median2){
 var median3=[...median1,...median2];
 median3.sort((a,b)=>a-b);
 let median=Math.floor(median3.length/2)
 let a=median3.length
-return a%2===0 ? (median3[median-1])/2:median3[median];
+console.log(a%2===0 ? (median3[median-1])/2:median3[median]);
 //console.log(median4)
+})
+(median1,median2);
+//----------------------------------------
+//1)f.Annoymous function:
+const median12=[1,2,3];
+const median21=[5,7,6];
+const media=function (median12,median21){
+var median31=[...median12,...median21];
+median31.sort((a,b)=>a-b);
+let median4=Math.floor(median31.length/2)
+let a=median31.length
+return a%2===0 ? (median31[median4-1])/2:median31[median4];
 }
-console.log(median(median1,median2));
+console.log(media(median12,median21));
 //--------------------------------------------------
-//1)f.IIFE FUNCTION:
+
+//1)h.Rotate an array by k times
+//IIFE FUNCTION:
 (function (arr,k){
 for(var i=0;i<k;i++){
 arr.push(arr[i])
@@ -125,16 +139,17 @@ arr.shift()
 console.log(arr)
 })([1,2,3,4,5],3)       
 //-----------------------------------------
-//1)h.Rotate an array by k times
-// const k=3;
-// const rotate=[1,2,3,4,5];
-// function(rotate,k){
-// for(const i=0;i<k;i++){
-// rotate=rotate.shit()
-// }
-// console.log(rotate)
-// }
-// (arr,k)
+//1)h.Annoymous function:
+const rotate1=[1,2,3,4,5];
+const k1=3;
+const annoy=function(rotate1,k1){
+for(var i=0;i<k1;i++){
+rotate1.push(rotate1.shift())
+}
+return rotate1;
+}
+console.log(annoy(rotate1,k1))
+
 //-----------------------------------------------------------------------------------
 // 2.Do the below programs in arrow functions.
 // 2)a.Print odd numbers in an array
