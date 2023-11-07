@@ -71,6 +71,44 @@ let sum2=0;
     console.log(sum2);
 })(13,17,45,45,70,56,90);
 //----------------------------------------
+//Return all the prime numbers in an array:
+//1)d.iife function:
+
+var count;
+(function(prime){
+    count=0;
+for(var i=0;i<=prime;i++){
+if(prime%i===0){
+    count++;
+}
+}
+if(count==2){
+    console.log("prime number")
+}
+else{
+    console.log("not a prime number")
+}
+})(11)
+//---------------------------------
+//d.Annoumous function:
+var count2;
+ var prime2=function(prime1){
+    count2=0;
+for(var i=0;i<=prime1;i++){
+if(prime1%i===0){
+    count2++;
+}
+}
+if(count2==2){
+   return("prime number")
+}
+else{
+  return ("not a prime number")
+}
+}
+console.log(prime2(9))
+
+//--------------------------------------------------
 //Return all the palindromes in an array
 // 1.e).annoymous function:
 var palindrome1=function (drome){
@@ -127,7 +165,7 @@ return a%2===0 ? (median31[median4-1])/2:median31[median4];
 console.log(media(median12,median21));
 //--------------------------------------------------
 
-//1)h.Rotate an array by k times
+//1.h.Rotate an array by k times
 //IIFE FUNCTION:
 (function (arr,k){
 for(var i=0;i<k;i++){
@@ -193,6 +231,24 @@ var A2 =(a,b,...arrow1)=>{
 }
 console.log(A2(13,17,18,45,70,56,90));
 //---------------------------------------------
+//2d.Return all the prime numbers in an array
+var coun1t;
+ var prime4=(prime5)=>{
+    count1=0;
+for(var i=0;i<=prime5;i++){
+if(prime5%i===0){
+    count1++;
+}
+}
+if(count1==2){
+   return("prime number")
+}
+else{
+  return ("not a prime number")
+}
+}
+console.log(prime4(131))
+//-----------------------------------------------------
 //Return all the palindromes in an array
 //2)e.ARROW FUNCTION: 
 var palindrome=(arr)=>{
